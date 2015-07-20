@@ -17,18 +17,12 @@ require 'socket'
 quoteRefresh = 1800
 
 
-# QOTD Pool - Add multiple Quote of the day servers and the script will randomly select one as it cycles through
+# QOTD Pool - Add multiple Quote of the day servers and the script will randomly select one as it cycles through using .sample.
 qotdPool = Array.new
 
-qotdPool[0] = "alpha.mike-r.com"
-qotdPool[1] = "alpha.mike-r.com"
-qotdPool[2] = "alpha.mike-r.com"
-
-
-#QOTD Server
-
-#qotdServer = "alpha.mike-r.com"
-qotdServer = qotdPool.sample
+qotdPool << "alpha.mike-r.com"
+qotdPool << "alpha.mike-r.com"
+qotdPool << "alpha.mike-r.com"
 
 
 #params for serial port
